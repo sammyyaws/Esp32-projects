@@ -1,0 +1,12 @@
+build/
+*.elf
+*.bin
+*.map
+*.log
+*.pyc
+*.orig
+*.bak
+*.swp
+.vscode/
+.idea/
+sdkconfig.old
