@@ -4,10 +4,10 @@
 #include <driver/gpio.h>
 
 extern "C" void app_main();
-
+    
 extern "C" void app_main(void)
 {
-const gpio_num_t ledPin= GPIO_NUM_25;
+const gpio_num_t ledPin= GPIO_NUM_15;
 gpio_config_t io_config{};
 io_config.mode=GPIO_MODE_OUTPUT;
 io_config.pin_bit_mask= 1ULL<<ledPin;
