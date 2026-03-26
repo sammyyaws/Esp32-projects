@@ -62,7 +62,9 @@ export default function TimerDashboard() {
             className="bg-white p-4 rounded-xl shadow flex justify-between"
           >
             <span>{d.name}</span>
-            <span>{d.time}</span>
+            <span>{d.onTime}</span>
+            <span>{d.offTime}</span>
+
             <span>Pin {d.pin}</span>
           </div>
         ))}

@@ -3,7 +3,7 @@ import { Formik, Form, Field } from "formik";
 export default function DeviceForm({ addDevice }) {
   return (
     <Formik
-      initialValues={{ deviceName: "", time: "", pin: "" }}
+      initialValues={{ deviceName: "", onTime: "",offTime:"", pin: "" }}
       onSubmit={(values, { resetForm }) => {
         addDevice(values); // call function passed as prop
         resetForm();
@@ -16,10 +16,16 @@ export default function DeviceForm({ addDevice }) {
             placeholder="Device Name"
             className="border border-gray-300 rounded-md p-2 w-full"
           />
-
+         <label className="text-sm">ON Time</label>
+          <Field
+           type="time"
+            name="onTime"
+            className="border border-gray-300 rounded-md p-2 w-full"
+          />
+                  <label className="text-sm">OFF Time</label>
           <Field
             type="time"
-            name="time"
+            name="offTime"
             className="border border-gray-300 rounded-md p-2 w-full"
           />
 
@@ -32,7 +38,7 @@ export default function DeviceForm({ addDevice }) {
             <option value="1">Pin 1</option>
             <option value="2">Pin 2</option>
             <option value="3">Pin 3</option>
-            <option value="3">Pin 4</option>
+            <option value="4">Pin 4</option>
           </Field>
 
           <button
